@@ -18,17 +18,17 @@ class FastPage(webapp2.RequestHandler):
         # insert html title where *** is
         results_template = the_jinja_env.get_template('***')
         the_variable_dict = {
-            "startspoint": "If Cinderella's shoe was a perfect fit",
-            "line2": "Why did it fall off?",
-            "img_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Deep_in_thought.jpg"
+            "startpoint": "[insert location]",
+            "endpoint": "[insert destination]",
+            "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVGEpAnhFQoTdolA3y8j0vPqYtt2JtyGKSVT5vsGkh8nFiHPsa"
         }
         self.response.write(results_template.render(the_variable_dict))
 
     def post(self):
         results_template = the_jinja_env.get_template('templates/results.html')
-        meme_first_line = self.request.get('user-first-ln')
-        meme_second_line = self.request.get('user-second-ln')
-        meme_img_choice = self.request.get('meme-type')
+        location_one = self.request.get('user_loc1')
+        location_two = self.request.get('user_loc2')
+        correct_map = self.request.get('map')
 
         pic_url = get_meme_url(meme_img_choice)
         the_variable_dict = {"line1": meme_first_line,

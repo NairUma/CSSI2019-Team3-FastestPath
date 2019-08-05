@@ -7,16 +7,7 @@
 
 these are the names for both drop down menus
 
-plans for post-get map images:
-  starting from home page
-    get user input from drop downs
-    redirect for FastPage
-      use user input to find certain map
-      print map on the fastest path page
 
-to-do list:
-  get paths for maps from place to place and time them
-  get updated home and fastest path interfaces
-  make the button work
-  make raw map functionalities (ABSOLUTE LAST)
-  debug (ABSOLUTE LAST)
+
+
+we are having troubles with the dropdown menu, it's rather confusing

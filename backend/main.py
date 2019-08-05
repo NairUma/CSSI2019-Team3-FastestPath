@@ -10,9 +10,10 @@ the_jinja_env = jinja2.Environment(
 # this the home page, using /home
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        main_template = the_jinja_env.get_template('CSSI2019-Team3-FastestPath/frontend/index1.html')
+        main_template = the_jinja_env.get_template('templates/index1.html')
         self.response.headers['Content-Type'] = 'html'
-        self.response.write('This is our main page')
+        #self.response.write('This is our main page')
+        self.response.write(main_template.render())
 # this the map page, using /fastestpath
 class FastPage(webapp2.RequestHandler):
     def get(self):
@@ -33,11 +34,12 @@ class FastPage(webapp2.RequestHandler):
 
         pic_url = get_meme_url(meme_img_choice)
         the_variable_dict = {"startpoint": user_loc1,
-                             "endpoint": user_loc2S,
+                             "endpoint": user_loc2,
                              "img_url": pic_url}
         self.response.write(results_template.render(the_variable_dict))
 
 app = webapp2.WSGIApplication([
     ('/home', MainPage),
-    ('/fastestpath', FastPage)
+    ('/fastestpath', FastPage),
+
 ], debug=True)

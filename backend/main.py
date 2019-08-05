@@ -9,6 +9,8 @@ the_jinja_env = jinja2.Environment(
     autoescape=True)
 
 #this function will set-up which map will be used.
+#map0 will be a blank map that reads "ERROR, START AND END POINT CANNOT BE THE SAME"
+#map 00 will be a blank map that reads "LOCATION ERROR"
 def map_pick(location_one, location_two):
     if location_one == location_two:
         url = map0
@@ -58,7 +60,7 @@ def map_pick(location_one, location_two):
         if location_two == "SBSB":
             url = SBSBPS1
     else:
-        self.response.write(main_template.render())
+        url = map00
     return url
 # this the home page, using /home
 class MainPage(webapp2.RequestHandler):

@@ -1,0 +1,6 @@
+*** THIS WILL BE THE VALUE NAMES FOR THE PLACES/ID/OPTIONS/LOCATIONS/WHATEVER YOU NEED ***
+*** THANKS ***
+University Student Union = "usu"
+Kellogg = "kellogg"
+SBSB = "sbsb"
+PS1 = "ps"

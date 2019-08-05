@@ -67,6 +67,8 @@ li a:hover{
   color:lightgrey;
 }
 
-.value {
-	
+#SP {
+	display: inline-block;
+	float: left;
+	margin: 50px;
 }

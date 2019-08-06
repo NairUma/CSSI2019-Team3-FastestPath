@@ -8,7 +8,7 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-#this function will set-up which map will be used.
+#map_pick will set-up which map will be used.
 #map0 will be a blank map that reads "ERROR, START AND END POINT CANNOT BE THE SAME"
 #map 00 will be a blank map that reads "LOCATION ERROR"
 def map_pick(location_one, location_two):
@@ -62,10 +62,11 @@ def map_pick(location_one, location_two):
     else:
         url = map00
     return url
+
 # this the home page, using /home
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        main_template = the_jinja_env.get_template('templates/index1.html')
+        main_template = the_jinja_env.get_template('materialize/index.html')
         self.response.headers['Content-Type'] = 'html'
         self.response.write(main_template.render())
 
@@ -83,7 +84,7 @@ class FastPage(webapp2.RequestHandler):
         location_one = self.request.get('starting point')
         location_two = self.request.get('destination')
         # correct_map = self.request.get('map')
-        map_url = map_pick(starting point, destination)
+        map_url = map_pick(location_one, location_two)
         the_variable_dict = {
             "img_url": "map_url"
         }

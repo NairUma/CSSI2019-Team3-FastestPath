@@ -62,14 +62,14 @@ def map_pick(location_one, location_two):
         url = map00
     return url
 
-# this the home page, using /home
+# # this the home page, using /home
 class MainPage(webapp2.RequestHandler):
     def get(self):
         main_template = the_jinja_env.get_template('materialize/index.html')
         self.response.headers['Content-Type'] = 'html'
         self.response.write(main_template.render())
 
-# this the map page, using /fastestpath
+# # this the map page, using /fastestpath
 class FastPage(webapp2.RequestHandler):
     def get(self):
         end_template = the_jinja_env.get_template('templates/FastestPath.html')
@@ -89,8 +89,15 @@ class FastPage(webapp2.RequestHandler):
         }
         self.response.write(results_template.render(the_variable_dict))
 
-#possibly change /home ---> / so it's the default page?
+# class MapPage(webapp2.RequestHandler):
+#     def get(self):
+#         map_template = the_jinja_env.get_template('basic-map')
+#         self.response.headers['Content-Type'] = 'html'
+#         self.response.write(map_template.render())
+
+# #possibly change /home ---> / so it's the default page?
 app = webapp2.WSGIApplication([
     ('/home', MainPage),
-    ('/fastestpath', FastPage)
+    ('/fastestpath', FastPage),
+    # ('/map', MapPage)
 ], debug=True)

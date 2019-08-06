@@ -63,4 +63,5 @@ select {
    -moz-appearance: none;
    appearance: none;       /* remove default arrow */
    background-image: url(...);   /* add custom arrow */
+
 }

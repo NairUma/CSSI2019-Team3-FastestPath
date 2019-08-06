@@ -9055,4 +9055,7 @@ input[type=range]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem;
   }
+  .browser-dafault{
+    text-align: center;
+  }
 }

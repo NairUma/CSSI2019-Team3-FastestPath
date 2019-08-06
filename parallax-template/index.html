@@ -8,7 +8,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/materialize.min.css" type="text/css" rel ="stylesheet"
+  <link href="css/materialize.min.css" type="text/css"rel="stylesheet"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <!--  Scripts-->
@@ -20,7 +20,7 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <img src="csusm_01.jpg">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
@@ -42,15 +42,33 @@
         <h1 class="header center teal-text text-lighten-2">Fastest Path</h1>
         <div class="row center">
           <h5 class="header col s12 light">Making your life easier one step at a time</h5>
+          <label>Starting Point</label>
+           <select class="browser-default">
+             <option value="" disabled selected>Choose your starting point</option>
+             <option value="1">SBSB</option>
+             <option value="2">Parking Structure</option>
+             <option value="3">Kellog Library</option>
+           </select>
+           <br><br>
+
+
+            <label>Destination</label>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your destination</option>
+              <option value="1">SBSB</option>
+              <option value="2">Parking Structure</option>
+              <option value="3">Kellog Library</option>
+            </select>
+
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">GO!</a>
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Go</a>
         </div>
         <br>
 
       </div>
     </div>
-    <div class="parallax"> alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -62,28 +80,18 @@
 
 
   <!-- Dropdown Structure -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <label>Starting Point</label>
- <select class="browser-default">
-   <option value="" disabled selected>Choose your option</option>
-   <option value="SBSB">SBSB</option>
-   <option value="PS">Parking Structure</option>
-   <option value="Kellogg">Kellogg Library</option>
-   <option value="USU">Unversity Student Union</option>
-   <option value="Starbucks">Starbucks</option>
- </select>
- <br>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <!-- Dropdown Structure -->
+
+  <!--  -->
 
 
-  <label>Destination</label>
-  <select name="browser-default">
-    <option value="" disabled selected>Choose your option</option>
-    <option value="SBSB">SBSB</option>
-    <option value="PS">Parking Structure</option>
-    <option value="Kellogg">Kellogg Library</option>
-    <option value="USU">Unversity Student Union</option>
-    <option value="Starbucks">Starbucks</option>
-  </select>
 
 
     </div>
@@ -105,28 +113,14 @@
   <div class="container">
     <div class="section">
 
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
+
+
 
     </div>
   </div>
 
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
+
 
   <footer class="page-footer teal">
     <div class="container">

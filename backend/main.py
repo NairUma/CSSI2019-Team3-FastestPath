@@ -2,13 +2,12 @@ import webapp2
 import jinja2
 import os
 
-
 the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-#map_pick will set-up which map will be used.
+#map_pick will set-up which map will be used by returning the url
 #map0 will be a blank map that reads "ERROR, START AND END POINT CANNOT BE THE SAME"
 #map 00 will be a blank map that reads "LOCATION ERROR"
 def map_pick(location_one, location_two):
@@ -79,19 +78,19 @@ class FastPage(webapp2.RequestHandler):
             "img_url": "map_url"
         }
         self.response.write(end_template.render(the_variable_dict))
+
     def post(self):
         results_template = the_jinja_env.get_template('templates/FastestPath.html')
         location_one = self.request.get('starting point')
         location_two = self.request.get('destination')
-        # correct_map = self.request.get('map')
         map_url = map_pick(location_one, location_two)
         the_variable_dict = {
             "img_url": "map_url"
         }
         self.response.write(results_template.render(the_variable_dict))
 
+#possibly change /home ---> / so it's the default page?
 app = webapp2.WSGIApplication([
     ('/home', MainPage),
-    ('/fastestpath', FastPage),
-
+    ('/fastestpath', FastPage)
 ], debug=True)

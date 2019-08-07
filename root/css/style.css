@@ -25,7 +25,7 @@ div.section{
 .parallax-container {
   min-height: 380px;
   line-height: 0;
-  height: auto;
+  height: 1025px !important;
   color: rgba(255,255,255,.9);
 }
   .parallax-container .section {
@@ -68,12 +68,12 @@ select {
   background-color: #9896a7;
 }
 .video-container1{
-  height:100vh;
+  height:200vh;
   z-index: 0;
   position: relative;
   overflow: hidden;
   @media(min-width: 600px){
-    height: 350vh;
+    height: 500vh;
   }
 }
 .FastestPath{

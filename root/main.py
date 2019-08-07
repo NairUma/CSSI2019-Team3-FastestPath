@@ -67,27 +67,37 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         main_template = the_jinja_env.get_template('templates/index.html')
         self.response.headers['Content-Type'] = 'html'
+
         self.response.write(main_template.render())
+
+    def post(self):
+        pass
 
 # # this the map page, using /fastestpath
 class FastPage(webapp2.RequestHandler):
     def get(self):
         end_template = the_jinja_env.get_template('templates/map.html')
-        self.response.headers['Content-Type'] = 'html'
+        # adding request.get *********************************
+
+        start_choice = self.request.get('start')
+        dest_choice = self.request.get('dest')
+
         the_variable_dict = {
-            "img_url": "map_url"
+            "start": start_choice,
+            "dest": dest_choice
         }
         self.response.write(end_template.render(the_variable_dict))
 
     def post(self):
-        results_template = the_jinja_env.get_template('templates/map.html')
-        location_one = self.request.get('starting point')
-        location_two = self.request.get('destination')
-        map_url = map_pick(location_one, location_two)
-        the_variable_dict = {
-            "img_url": "map_url"
-        }
-        self.response.write(results_template.render(the_variable_dict))
+        # results_template = the_jinja_env.get_template('templates/map.html')
+        # location_one = self.request.get('starting point')
+        # location_two = self.request.get('destination')
+        # map_url = map_pick(location_one, location_two)
+        # the_variable_dict = {
+        #     "img_url": "map_url"
+        # }
+        # self.response.write(results_template.render(the_variable_dict))
+        pass
 
 # class MapPage(webapp2.RequestHandler):
 #     def get(self):
@@ -98,6 +108,6 @@ class FastPage(webapp2.RequestHandler):
 # #possibly change /home ---> / so it's the default page?
 app = webapp2.WSGIApplication([
     ('/', MainPage),
-    ('/fastestpath', FastPage),
+    ('/fastestpath', FastPage)
     # ('/map', MapPage)
 ], debug=True)

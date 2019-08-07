@@ -42,11 +42,12 @@
 
   <div class="FastestPath">Fastest Path</div>
   <div class="life">Making your life easier one step at a time</div>
+  <form method="get" action="/fastestpath">
   <label id="start">Starting Point</label>
-   <select class="start1">
+   <select class="start1" name="start">
      <option value="" disabled selected>Choose your starting point</option>
      <option value="1">SBSB</option>
-     <option value="2">Parking Structure</option>
+     <option value="2">Parking Structure 1</option>
      <option value="3">Kellogg Library</option>
      <option value="4">USU</option>
      <option value="5">Starbucks</option>
@@ -54,17 +55,18 @@
    <br><br>
 
     <label id="dest"> Destination</label>
-    <select class="end1">
+    <select class="end1" name="dest">
       <option value="" disabled selected>Choose your destination</option>
       <option value="1">SBSB</option>
-      <option value="2">Parking Structure</option>
+      <option value="2">Parking Structure 1</option>
       <option value="3">Kellogg Library</option>
       <option value="4">USU</option>
       <option value="5">Starbucks</option>
     </select>
 
-      <a href="http://materializecss.com/getting-started.html"  id="go1" class="btn-large waves-effect waves-light teal lighten-1">Go</a>
-
+      <!-- <a href="/fastestpath" id="go1" class="btn-large waves-effect waves-light teal lighten-1">Go</a> -->
+      <input type="submit" value="Go!">
+    </form>
   <div class="video-container1">
     <video
      autoplay loop playsinline muted id ="video1">

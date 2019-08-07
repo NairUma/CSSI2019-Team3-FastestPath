@@ -65,14 +65,14 @@ def map_pick(location_one, location_two):
 # # this the home page, using /home
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        main_template = the_jinja_env.get_template('materialize/index.html')
+        main_template = the_jinja_env.get_template('templates/index.html')
         self.response.headers['Content-Type'] = 'html'
         self.response.write(main_template.render())
 
 # # this the map page, using /fastestpath
 class FastPage(webapp2.RequestHandler):
     def get(self):
-        end_template = the_jinja_env.get_template('templates/FastestPath.html')
+        end_template = the_jinja_env.get_template('templates/map.html')
         self.response.headers['Content-Type'] = 'html'
         the_variable_dict = {
             "img_url": "map_url"
@@ -80,7 +80,7 @@ class FastPage(webapp2.RequestHandler):
         self.response.write(end_template.render(the_variable_dict))
 
     def post(self):
-        results_template = the_jinja_env.get_template('templates/FastestPath.html')
+        results_template = the_jinja_env.get_template('templates/map.html')
         location_one = self.request.get('starting point')
         location_two = self.request.get('destination')
         map_url = map_pick(location_one, location_two)
@@ -97,7 +97,7 @@ class FastPage(webapp2.RequestHandler):
 
 # #possibly change /home ---> / so it's the default page?
 app = webapp2.WSGIApplication([
-    ('/home', MainPage),
+    ('/', MainPage),
     ('/fastestpath', FastPage),
     # ('/map', MapPage)
 ], debug=True)

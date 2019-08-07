@@ -155,3 +155,10 @@ select.end1{
   left: 50%;
   transform:translate(-50%, -50%);
 }
+#map1{
+  width: 450px;
+height: 450px;
+background-size: 100%;
+text-align: center;
+position: relative;
+}

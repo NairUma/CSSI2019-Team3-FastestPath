@@ -12,7 +12,7 @@ the_jinja_env = jinja2.Environment(
 #map 00 will be a blank map that reads "LOCATION ERROR"
 def map_pick(location_one, location_two):
     if location_one == location_two:
-        url = "/css/images/MAPSendstartconflict.png"
+        url = "/css/images/MAPS/endstartconflict.png"
     elif location_one == "3":
         if location_two == "4":
             url = "/css/images/MAPS/4-3.png"
@@ -57,9 +57,9 @@ def map_pick(location_one, location_two):
         if location_two == "5":
             url = "/css/images/MAPS/2-5.png"
         if location_two == "1":
-            url = "/css/images/MAPS/2-3.png"
+            url = "/css/images/MAPS/2-1.png"
     else:
-        url = map00
+        url = "/css/images/MAPS/locerroruse.png"
     return url
 
 # # this the home page, using /home

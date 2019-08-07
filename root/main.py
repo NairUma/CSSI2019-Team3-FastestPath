@@ -12,52 +12,52 @@ the_jinja_env = jinja2.Environment(
 #map 00 will be a blank map that reads "LOCATION ERROR"
 def map_pick(location_one, location_two):
     if location_one == location_two:
-        url = map0
-    elif location_one == "Kellogg":
-        if location_two == "USU":
-            url = KellUSU
-        if location_two == "Starbucks":
-            url = KellStar
-        if location_two == "SBSB":
-            url = KellSBSB
-        if location_two == "PS1":
-            url = KellPS1
-    elif location_one == "USU":
-        if location_two == "Kellogg":
-            url = KellUSU
-        if location_two == "Starbucks":
-            url = USUStar
-        if location_two == "SBSB":
-            url = USUSBSB
-        if location_two == "PS1":
-            url = USUPS1
-    elif location_one == "Starbucks":
-        if location_two == "Kellogg":
-            url = KellStar
-        if location_two == "USU":
-            url = USUStar
-        if location_two == "SBSB":
-            url = StarSBSB
-        if location_two == "PS1":
-            url = StarPS1
-    elif location_one == "SBSB":
-        if location_two == "Kellogg":
-            url = KellSBSB
-        if location_two == "USU":
-            url = USUSBSB
-        if location_two == "Starbucks":
-            url = StarSBSB
-        if location_two == "PS1":
-            url = SBSBPS1
-    elif location_one == "PS1":
-        if location_two == "Kellogg":
-            url = KellPS1
-        if location_two == "USU":
-            url = USUPS1
-        if location_two == "Starbucks":
-            url = StarPS1
-        if location_two == "SBSB":
-            url = SBSBPS1
+        url = "/css/images/MAPSendstartconflict.png"
+    elif location_one == "3":
+        if location_two == "4":
+            url = "/css/images/MAPS/4-3.png"
+        if location_two == "5":
+            url = "/css/images/MAPS/3-5.png"
+        if location_two == "1":
+            url = "/css/images/MAPS/1-3.png"
+        if location_two == "2":
+            url = "/css/images/MAPS/2-3.png"
+    elif location_one == "4":
+        if location_two == "3":
+            url = "/css/images/MAPS/4-3.png"
+        if location_two == "5":
+            url = "/css/images/MAPS/4-5.png"
+        if location_two == "1":
+            url = "/css/images/MAPS/1-4.png"
+        if location_two == "2":
+            url = "/css/images/MAPS/2-4.png"
+    elif location_one == "5":
+        if location_two == "3":
+            url = "/css/images/MAPS/3-5.png"
+        if location_two == "4":
+            url = "/css/images/MAPS/4-5.png"
+        if location_two == "1":
+            url = "/css/images/MAPS/1-5.png"
+        if location_two == "2":
+            url = "/css/images/MAPS/2-5.png"
+    elif location_one == "1":
+        if location_two == "3":
+            url = "/css/images/MAPS/1-3.png"
+        if location_two == "4":
+            url = "/css/images/MAPS/1-4.png"
+        if location_two == "5":
+            url = "/css/images/MAPS/1-5.png"
+        if location_two == "2":
+            url = "/css/images/MAPS/2-3.png"
+    elif location_one == "2":
+        if location_two == "3":
+            url = "/css/images/MAPS/2-3.png"
+        if location_two == "4":
+            url = "/css/images/MAPS/2-4.png"
+        if location_two == "5":
+            url = "/css/images/MAPS/2-5.png"
+        if location_two == "1":
+            url = "/css/images/MAPS/2-3.png"
     else:
         url = map00
     return url
@@ -81,10 +81,11 @@ class FastPage(webapp2.RequestHandler):
 
         start_choice = self.request.get('start')
         dest_choice = self.request.get('dest')
-
+        map_url = map_pick(start_choice, dest_choice)
         the_variable_dict = {
             "start": start_choice,
-            "dest": dest_choice
+            "dest": dest_choice,
+            "img_url": map_url
         }
         self.response.write(end_template.render(the_variable_dict))
 

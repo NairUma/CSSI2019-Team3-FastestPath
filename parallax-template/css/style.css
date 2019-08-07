@@ -1,0 +1,157 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+div.section{
+  width: 300px;
+  height: 400px;
+}
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;       /* remove default arrow */
+   background-image: url(...);   /* add custom arrow */
+}
+.white1{
+  background-color: #9896a7;
+}
+.video-container1{
+  height:100vh;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  @media(min-width: 600px){
+    height: 350vh;
+  }
+}
+.FastestPath{
+  font-size: 35px;
+  color:darkgrey;
+  z-index:1;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  color:teal;
+
+
+}
+.life{
+  font-size: 20px;
+  color:white;
+  z-index:1;
+  position: absolute;
+  top:35%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+select.start1{
+  position:absolute;
+  z-index: 1;
+  display:block;
+  top:45%;
+  left:30%;
+  width:45%;
+}
+select.end1{
+  position:absolute;
+  z-index: 1;
+  display:block;
+  top:55%;
+  left:30%;
+  width:45%;
+}
+#dest{
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  top:58%;
+  left:24.5%;
+  color:white;
+  transform:translate(-50%, -50%);
+}
+#start{
+
+    position:absolute;
+    z-index: 1;
+    display:inline-block;
+    top:48%;
+    left:25%;
+    color:white;
+    transform:translate(-50%, -50%);
+}
+#go1{
+  position: absolute;
+  z-index: 1;
+  display:inline-block;
+  top:75%;
+  left:50%;
+  border-radius:5px;
+  transform:translate(-50%, -50%);
+}
+.parallax-container1{
+  margin:0;
+  height:auto;
+}
+#nav1{
+  margin-right:40%;
+}
+.secondimage{
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+}

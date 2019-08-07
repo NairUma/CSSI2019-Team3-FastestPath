@@ -6,10 +6,11 @@
   <title>Parallax Template - Materialize</title>
 
   <!-- CSS  -->
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/materialize.min.css" type="text/css"rel="stylesheet"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet"/>
+
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -18,57 +19,66 @@
 
 </head>
 <body>
-  <nav class="white" role="navigation">
+  <nav class="white1" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+      <ul id="nav1"class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="map.html">Map</a></li>
+
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-        <li><a href="index1.html">Home</a></li>
-        <li><a href="FastestPath.html">Fastest Path</a></li>
-        <li><a href="about1.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="map.html">Map</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Fastest Path</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Making your life easier one step at a time</h5>
-          <label>Starting Point</label>
-           <select class="browser-default">
-             <option value="" disabled selected>Choose your starting point</option>
-             <option value="1">SBSB</option>
-             <option value="2">Parking Structure</option>
-             <option value="3">Kellog Library</option>
-           </select>
-           <br><br>
+  <div class="parallax-container">
 
 
-            <label>Destination</label>
-            <select class="browser-default">
-              <option value="" disabled selected>Choose your destination</option>
-              <option value="1">SBSB</option>
-              <option value="2">Parking Structure</option>
-              <option value="3">Kellog Library</option>
-            </select>
+  <div class="FastestPath">Fastest Path</div>
+  <div class="life">Making your life easier one step at a time</div>
+  <label id="start">Starting Point</label>
+   <select class="start1">
+     <option value="" disabled selected>Choose your starting point</option>
+     <option value="1">SBSB</option>
+     <option value="2">Parking Structure</option>
+     <option value="3">Kellogg Library</option>
+   </select>
+   <br><br>
 
-        </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Go</a>
-        </div>
-        <br>
+    <label id="dest"> Destination</label>
+    <select class="end1">
+      <option value="" disabled selected>Choose your destination</option>
+      <option value="1">SBSB</option>
+      <option value="2">Parking Structure</option>
+      <option value="3">Kellogg Library</option>
+    </select>
 
-      </div>
+      <a href="http://materializecss.com/getting-started.html"  id="go1" class="btn-large waves-effect waves-light teal lighten-1">Go</a>
+
+  <div class="video-container1">
+    <video
+     autoplay loop playsinline muted id ="video1">
+     <source src="images\y2mate.com - csusm_aerial_campus_tour_IfUAdulSR84_1080p.mp4" type="video/mp4">
+
+  </video>
+
+
+
+    <br>
+
+
+</div>
+
+
     </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+
+
   </div>
 
 
@@ -80,13 +90,12 @@
 
 
   <!-- Dropdown Structure -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
       <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
   <!-- Dropdown Structure -->
 
   <!--  -->
@@ -95,7 +104,6 @@
 
 
     </div>
-    <!-- <input type="submit" value="Go!"> -->
   </div>
 
 
@@ -103,60 +111,21 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <div class="secondimage">A responsive design to pathfinding</div>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="images/background2.jpg" alt="csusm"></div>
   </div>
 
   <div class="container">
-    <div class="section">
 
-
-
-
-    </div>
   </div>
 
 
 
 
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
 
 
 

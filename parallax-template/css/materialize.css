@@ -2124,7 +2124,7 @@
 }
 
 .white {
-  background-color: #FFFFFF !important;
+  background-color: #afafaf !important;
 }
 
 .white-text {
@@ -6091,7 +6091,7 @@ button:focus {
 }
 
 label {
-  font-size: 0.8rem;
+  font-size: 15px;
   color: #9e9e9e;
 }
 

@@ -133,10 +133,12 @@ class FastPage(webapp2.RequestHandler):
         start_choice = self.request.get('start')
         dest_choice = self.request.get('dest')
         map_url = map_pick(start_choice, dest_choice)
+        timer = timer_pick(start_choice, dest_choice)
         the_variable_dict = {
             "start": start_choice,
             "dest": dest_choice,
-            "img_url": map_url
+            "img_url": map_url,
+            "timer_": timer
         }
         self.response.write(end_template.render(the_variable_dict))
 
@@ -156,7 +158,7 @@ class MapPage(webapp2.RequestHandler):
         map_template = the_jinja_env.get_template('templates/map.html')
         self.response.headers['Content-Type'] = 'html'
         the_variable_dict = {
-            "img_url": "/css/images/MAPS/MAPTEMPLATE.png"
+            "img_url": "/css/images/MAPS/rawmap.png"
         }
         self.response.write(map_template.render(the_variable_dict))
 

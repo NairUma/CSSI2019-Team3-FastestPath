@@ -12,7 +12,7 @@ the_jinja_env = jinja2.Environment(
 #map 00 will be a blank map that reads "LOCATION ERROR"
 def map_pick(location_one, location_two):
     if location_one == location_two:
-        url = "/css/images/MAPS/endstarconflict.png"
+        url = "/css/images/MAPS/endstarconflict.gif"
     elif location_one == "3":
         if location_two == "4":
             url = "/css/images/MAPS/4-3.png"
@@ -64,7 +64,7 @@ def map_pick(location_one, location_two):
 
 def timer_pick(location_one, location_two):
     if location_one == location_two:
-        the_timer = "/css/images/TIMERS/"
+        the_timer = ""
     elif location_one == "3":
         if location_two == "4":
             the_timer = "/css/images/TIMERS/usu_to_kellogg.jpg"

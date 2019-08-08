@@ -161,7 +161,9 @@ height: 100%;
 background-repeat: no-repeat;
 background-size: 100%;
 text-align: center;
+z-index: 0;
 position: relative;
+overflow: hidden;
 }
 .parallax-container2 {
   min-height: 380px;
@@ -171,7 +173,11 @@ position: relative;
 }
 
 #timer {
-  width: 100px;
-  height: 50px;
+  width: 55%;
+  z-index: 1;
+  height: 20%;
+  max-width: 25.5%;
   background-color: black;
+  background-repeat: no-repeat;
+  position: absolute;
 }

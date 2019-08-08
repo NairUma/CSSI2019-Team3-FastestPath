@@ -113,7 +113,7 @@ class AboutPage(webapp2.RequestHandler):
     def get(self):
         about_template = the_jinja_env.get_template('templates/about.html')
         self.response.headers['Content-Type'] = 'html'
-        self.response.write(map_template.render())
+        self.response.write(about_template.render())
 
 
 app = webapp2.WSGIApplication([

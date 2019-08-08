@@ -104,15 +104,21 @@ class MapPage(webapp2.RequestHandler):
     def get(self):
         map_template = the_jinja_env.get_template('templates/map.html')
         self.response.headers['Content-Type'] = 'html'
-        self.response.write(map_template.render())
         the_variable_dict = {
             "img_url": "/css/images/MAPS/MAPTEMPLATE.png"
         }
+        self.response.write(map_template.render(the_variable_dict))
 
-# #possibly change /home ---> / so it's the default page?
+class AboutPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('templates/about.html')
+        self.response.headers['Content-Type'] = 'html'
+        self.response.write(map_template.render())
+
+
 app = webapp2.WSGIApplication([
     ('/', MainPage),
-    ('/fastestpath', FastPage)
-    ('/map', MapPage)
+    ('/fastestpath', FastPage),
+    ('/map', MapPage),
     ('/about', AboutPage)
 ], debug=True)

@@ -100,15 +100,19 @@ class FastPage(webapp2.RequestHandler):
         # self.response.write(results_template.render(the_variable_dict))
         pass
 
-# class MapPage(webapp2.RequestHandler):
-#     def get(self):
-#         map_template = the_jinja_env.get_template('basic-map')
-#         self.response.headers['Content-Type'] = 'html'
-#         self.response.write(map_template.render())
+class MapPage(webapp2.RequestHandler):
+    def get(self):
+        map_template = the_jinja_env.get_template('templates/map.html')
+        self.response.headers['Content-Type'] = 'html'
+        self.response.write(map_template.render())
+        the_variable_dict = {
+            "img_url": "/css/images/MAPS/MAPTEMPLATE.png"
+        }
 
 # #possibly change /home ---> / so it's the default page?
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/fastestpath', FastPage)
-    # ('/map', MapPage)
+    ('/map', MapPage)
+    ('/about', AboutPage)
 ], debug=True)

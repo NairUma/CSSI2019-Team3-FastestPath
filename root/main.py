@@ -62,12 +62,63 @@ def map_pick(location_one, location_two):
         url = "/css/images/MAPS/locerroruse.png"
     return url
 
+def timer_pick(location_one, location_two):
+    if location_one == location_two:
+        the_timer = "/css/images/Timers/"
+    elif location_one == "3":
+        if location_two == "4":
+            the_timer = "/css/images/Timers/"
+        if location_two == "5":
+            the_timer = "/css/images/Timers/"
+        if location_two == "1":
+            the_timer = "/css/images/Timers/"
+        if location_two == "2":
+            the_timer = "/css/images/Timers/"
+    elif location_one == "4":
+        if location_two == "3":
+            the_timer = "/css/images/Timers/"
+        if location_two == "5":
+            the_timer = "/css/images/Timers/"
+        if location_two == "1":
+            the_timer = "/css/images/Timers/"
+        if location_two == "2":
+            the_timer = "/css/images/Timers/"
+    elif location_one == "5":
+        if location_two == "3":
+            the_timer = "/css/images/Timers/"
+        if location_two == "4":
+            the_timer = "/css/images/Timers/"
+        if location_two == "1":
+            the_timer = "/css/images/Timers/"
+        if location_two == "2":
+            the_timer = "/css/images/Timers/"
+    elif location_one == "1":
+        if location_two == "3":
+            the_timer = "/css/images/Timers/"
+        if location_two == "4":
+            the_timer = "/css/images/Timers/"
+        if location_two == "5":
+            the_timer = "/css/images/Timers/"
+        if location_two == "2":
+            the_timer = "/css/images/Timers/"
+    elif location_one == "2":
+        if location_two == "3":
+            the_timer = "/css/images/Timers/"
+        if location_two == "4":
+            the_timer = "/css/images/Timers/"
+        if location_two == "5":
+            the_timer = "/css/images/Timers/"
+        if location_two == "1":
+            the_timer = "/css/images/Timers/"
+    else:
+        the_timer = "/css/images/Timers/"
+    return the_timer
+
 # # this the home page, using /home
 class MainPage(webapp2.RequestHandler):
     def get(self):
         main_template = the_jinja_env.get_template('templates/index.html')
         self.response.headers['Content-Type'] = 'html'
-
         self.response.write(main_template.render())
 
     def post(self):

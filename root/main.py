@@ -155,12 +155,12 @@ class FastPage(webapp2.RequestHandler):
 
 class MapPage(webapp2.RequestHandler):
     def get(self):
-        map_template = the_jinja_env.get_template('templates/map.html')
+        map_template = the_jinja_env.get_template('templates/map1.html')
         self.response.headers['Content-Type'] = 'html'
         the_variable_dict = {
             "img_url": "/css/images/MAPS/rawmap.png"
         }
-        self.response.write(map_template.render(the_variable_dict))
+        self.response.write(map_template.render())
 
 class AboutPage(webapp2.RequestHandler):
     def get(self):

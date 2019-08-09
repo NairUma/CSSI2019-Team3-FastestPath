@@ -51,3 +51,8 @@
 .button:hover {
   background-color: #555;
 }
+
+html, body, #wrapper {
+    width: 100%;
+    min-height: 100%;
+}
